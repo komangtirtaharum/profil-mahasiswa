@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tugas JavaScript - Tirta</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- HEADER -->
+    <header class="bg-blue-600 text-white text-center py-6 shadow-md">
+
+        <h1 class="text-3xl font-bold">
+            Tugas JavaScript
+        </h1>
+
+        <p class="mt-2 text-blue-100">
+            Menghitung Nilai Akhir Mahasiswa
+        </p>
+
+    </header>
+
+
+    <!-- NAVBAR -->
+    <nav class="bg-white shadow-md">
+
+        <div class="max-w-6xl mx-auto px-6 py-4">
+
+            <div class="flex flex-wrap gap-4">
+
+                <a href="index.html"
+                   class="px-4 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-600">
+                    Beranda
+                </a>
+
+                <a href="tentang.html"
+                   class="px-4 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-600">
+                    Tentang
+                </a>
+
+                <a href="portfolio.html"
+                   class="px-4 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-600">
+                    Portofolio
+                </a>
+
+                <a href="javascript.html"
+                   class="px-4 py-2 bg-blue-600 text-white rounded-lg">
+                    Tugas JavaScript
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- CONTENT -->
+    <main class="max-w-3xl mx-auto p-6 md:p-10">
+
+        <div class="bg-white rounded-xl shadow-md p-6 md:p-8">
+
+            <h2 class="text-2xl font-bold text-blue-600 mb-3">
+                Kalkulator Nilai Mahasiswa
+            </h2>
+
+            <p class="text-gray-600 mb-6">
+                Masukkan nilai tugas, UTS, dan UAS untuk menghitung
+                nilai akhir dan grade mahasiswa.
+            </p>
+
+
+            <!-- FORM -->
+            <div class="space-y-5">
+
+                <!-- NILAI TUGAS -->
+                <div>
+
+                    <label class="block font-semibold mb-2">
+                        Nilai Tugas
+                    </label>
+
+                    <input
+                        type="number"
+                        id="tugas"
+                        placeholder="Masukkan nilai tugas"
+                        class="w-full border border-gray-300 rounded-lg
+                               px-4 py-3 focus:outline-none
+                               focus:ring-2 focus:ring-blue-500"
+                    >
+
+                </div>
+
+
+                <!-- NILAI UTS -->
+                <div>
+
+                    <label class="block font-semibold mb-2">
+                        Nilai UTS
+                    </label>
+
+                    <input
+                        type="number"
+                        id="uts"
+                        placeholder="Masukkan nilai UTS"
+                        class="w-full border border-gray-300 rounded-lg
+                               px-4 py-3 focus:outline-none
+                               focus:ring-2 focus:ring-blue-500"
+                    >
+
+                </div>
+
+
+                <!-- NILAI UAS -->
+                <div>
+
+                    <label class="block font-semibold mb-2">
+                        Nilai UAS
+                    </label>
+
+                    <input
+                        type="number"
+                        id="uas"
+                        placeholder="Masukkan nilai UAS"
+                        class="w-full border border-gray-300 rounded-lg
+                               px-4 py-3 focus:outline-none
+                               focus:ring-2 focus:ring-blue-500"
+                    >
+
+                </div>
+
+
+                <!-- BUTTON -->
+                <button
+                    onclick="hitungNilai()"
+                    class="w-full bg-blue-600 text-white
+                           font-semibold py-3 rounded-lg
+                           hover:bg-blue-700 transition">
+
+                    Hitung Nilai
+
+                </button>
+
+            </div>
+
+
+            <!-- HASIL -->
+            <div
+                id="hasil"
+                class="hidden mt-6 bg-blue-50
+                       border border-blue-200
+                       rounded-xl p-6 text-center">
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="bg-blue-100 text-center py-6 mt-8">
+
+        <p>
+            © 2026 Tirta Harum. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        function hitungNilai() {
+
+            // Mengambil nilai dari input
+            const tugas = Number(
+                document.getElementById("tugas").value
+            );
+
+            const uts = Number(
+                document.getElementById("uts").value
+            );
+
+            const uas = Number(
+                document.getElementById("uas").value
+            );
+
+
+            // Mengecek nilai
+            if (
+                tugas < 0 || tugas > 100 ||
+                uts < 0 || uts > 100 ||
+                uas < 0 || uas > 100
+            ) {
+
+                alert("Nilai harus berada di antara 0 sampai 100.");
+
+                return;
+            }
+
+
+            // Menghitung nilai akhir
+            const nilaiAkhir =
+                (tugas * 0.30) +
+                (uts * 0.30) +
+                (uas * 0.40);
+
+
+            // Menentukan grade
+            let grade;
+
+
+            if (nilaiAkhir >= 85) {
+
+                grade = "A";
+
+            } else if (nilaiAkhir >= 75) {
+
+                grade = "B";
+
+            } else if (nilaiAkhir >= 65) {
+
+                grade = "C";
+
+            } else if (nilaiAkhir >= 50) {
+
+                grade = "D";
+
+            } else {
+
+                grade = "E";
+
+            }
+
+
+            // Menampilkan hasil
+            const hasil = document.getElementById("hasil");
+
+            hasil.classList.remove("hidden");
+
+            hasil.innerHTML = `
+                <p class="text-gray-600">
+                    Nilai Akhir
+                </p>
+
+                <p class="text-4xl font-bold text-blue-600 my-2">
+                    ${nilaiAkhir.toFixed(2)}
+                </p>
+
+                <p class="text-xl">
+                    Grade:
+                    <b>${grade}</b>
+                </p>
+            `;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

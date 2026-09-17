@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profil Mahasiswa - Tirta</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- HEADER -->
+    <header class="bg-blue-600 text-white text-center py-6 shadow-md">
+        <h2 class="text-3xl font-bold">
+            Profil Mahasiswa
+        </h2>
+
+        <p class="mt-2 text-blue-100">
+            Portfolio Pribadi
+        </p>
+    </header>
+
+
+    <!-- LAYOUT -->
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row min-h-screen">
+
+        <!-- SIDEBAR -->
+        <aside class="w-full md:w-64 bg-white p-6 shadow-sm">
+
+            <h3 class="text-xl font-bold text-blue-600 mb-4">
+                Menu
+            </h3>
+
+            <ul class="space-y-2">
+
+    <li>
+        <a href="index.html"
+           class="block py-2 px-3 rounded-lg bg-blue-100 text-blue-600">
+            Beranda
+        </a>
+    </li>
+
+    <li>
+        <a href="tentang.html"
+           class="block py-2 px-3 rounded-lg hover:bg-blue-100 hover:text-blue-600">
+            Tentang
+        </a>
+    </li>
+
+    <li>
+        <a href="portfolio.html"
+           class="block py-2 px-3 rounded-lg hover:bg-blue-100 hover:text-blue-600">
+            Portofolio
+        </a>
+    </li>
+
+    <li>
+        <a href="javascript.html"
+           class="block py-2 px-3 rounded-lg hover:bg-blue-100 hover:text-blue-600">
+            Tugas JavaScript
+        </a>
+    </li>
+
+</ul>
+
+        </aside>
+
+
+        <!-- CONTENT -->
+        <main class="flex-1 p-6 md:p-10">
+
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
+                Profil Saya
+            </h1>
+
+
+            <!-- BERANDA -->
+            <section id="beranda" class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold text-blue-600 mb-2">
+                        Selamat Datang 👋
+                    </h3>
+
+                    <p>
+                        Selamat datang di halaman profil pribadi saya.
+                        Website ini dibuat menggunakan HTML dan Tailwind CSS.
+                    </p>
+                </div>
+
+
+                <div class="bg-white p-6 rounded-xl shadow-md">
+
+                    <h3 class="text-xl font-bold text-blue-600 mb-2">
+                        Profil Mahasiswa
+                    </h3>
+
+                    <p>
+                        <b>Nama:</b> I Komang Tirta Harumaniasa
+                    </p>
+
+                    <p>
+                        <b>Program Studi:</b> Ilmu Komputer
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- DATA DIRI -->
+            <section class="bg-white rounded-xl shadow-md p-6 mb-8">
+
+                <h2 class="text-2xl font-bold text-blue-600 mb-6">
+                    Data Diri
+                </h2>
+
+
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+
+                    <!-- BIODATA -->
+                    <div class="flex-1 space-y-2">
+
+                        <p>
+                            <b>Nama:</b>
+                            I KOMANG TIRTA HARUMANIASA
+                        </p>
+
+                        <p>
+                            <b>NIM:</b>
+                            2415101086
+                        </p>
+
+                        <p>
+                            <b>Program Studi:</b>
+                            Ilmu Komputer
+                        </p>
+
+                        <p>
+                            <b>Jenis Kelamin:</b>
+                            Laki-laki
+                        </p>
+
+                        <p>
+                            <b>Hobi:</b>
+                            Olahraga
+                        </p>
+
+                        <p>
+                            <b>Asal Kota:</b>
+                            Karangasem
+                        </p>
+
+                    </div>
+
+
+                    <!-- FOTO -->
+                    <div>
+
+                        <img
+                            src="./gambar/foto.jpg.jpg"
+                            alt="Foto Profil"
+                            class="w-40 h-48 object-cover rounded-xl shadow-md"
+                        >
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- RIWAYAT SEKOLAH -->
+            <section class="bg-purple-200 p-4 rounded-xl mb-8">
+
+                <h2 class="text-xl font-semibold mb-4">
+                    Riwayat Sekolah
+                </h2>
+
+
+                <div class="overflow-x-auto">
+
+                    <table class="w-full bg-white rounded-lg overflow-hidden">
+
+                        <thead class="bg-purple-100">
+
+                            <tr>
+
+                                <th class="border border-purple-300 p-3">
+                                    No
+                                </th>
+
+                                <th class="border border-purple-300 p-3">
+                                    Nama Sekolah
+                                </th>
+
+                                <th class="border border-purple-300 p-3">
+                                    Tahun Masuk
+                                </th>
+
+                                <th class="border border-purple-300 p-3">
+                                    Tahun Lulus
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <tr>
+
+                                <td class="border border-purple-300 p-3 text-center">
+                                    1
+                                </td>
+
+                                <td class="border border-purple-300 p-3 text-center">
+                                    SMPN 3 Kubu
+                                </td>
+
+                                <td class="border border-purple-300 p-3 text-center">
+                                    2018
+                                </td>
+
+                                <td class="border border-purple-300 p-3 text-center">
+                                    2021
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td class="border border-purple-300 p-3 text-center">
+                                    2
+                                </td>
+
+                                <td class="border border-purple-300 p-3 text-center">
+                                    SMAN 1 KUBU
+                                </td>
+
+                                <td class="border border-purple-300 p-3 text-center">
+                                    2021
+                                </td>
+
+                                <td class="border border-purple-300 p-3 text-center">
+                                    2024
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- PORTOFOLIO -->
+            <section id="portofolio" class="mb-8">
+
+                <h2 class="text-2xl font-bold text-blue-600 mb-4">
+                    Portofolio
+                </h2>
+
+
+                <div class="bg-white p-6 rounded-xl shadow-md">
+
+                    <h3 class="text-xl font-bold mb-2">
+                        Project Website
+                    </h3>
+
+                    <p>
+                        Website profil mahasiswa yang dibuat
+                        menggunakan HTML dan Tailwind CSS.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- KONTAK -->
+            <section id="kontak" class="bg-white p-6 rounded-xl shadow-md mb-8">
+
+                <h2 class="text-2xl font-bold text-blue-600 mb-4">
+                    Kontak
+                </h2>
+
+                <p>
+                    <b>Email:</b> komangtirta492@gmail.com
+                </p>
+
+                <p>
+                    <b>Instagram:</b> @taaaa_nee
+                </p>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="bg-blue-100 text-center py-6">
+
+        <p>
+            © 2026 Tirta Harum. All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
